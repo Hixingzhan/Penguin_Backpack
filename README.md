@@ -11,3 +11,11 @@
 ![](https://pic.imgdb.cn/item/62c52c7c5be16ec74af33377.jpg)
 ## 小说阅读模式
 ![](https://pic.imgdb.cn/item/62c52c9f5be16ec74af360ee.jpg)
+### 小说阅读模式使用说明
+在你的代码中添加
+```
+/*xingzhan:novelStart
+小说内容
+xingzhan:novelEnd*/
+```
+即可让你的作品支持此扩展
