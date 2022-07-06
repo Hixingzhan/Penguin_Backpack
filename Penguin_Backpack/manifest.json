@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Penguin Backpack（内测中）",
+  "description": "星斩工作室出品的学而思编程社区加强扩展程序",
+  "version": "1.0",
+  "author": "星斩工作室",
+  "background" : {
+    "scripts": ["js/jquery-3.6.0/jquery-3.6.0.min.js","js/sweetalert2.all.js","./background.js"],
+    "persistent": true
+  },
+	"browser_action":
+	{
+		"default_title": "Penguin Backpack",
+		"default_popup": "popup.html",
+    "default_icon": {
+      "48":"img/icon48.png",
+      "128":"img/icon128.png"
+    }
+	},
+  "content_scripts": [
+    {
+      "matches": ["https://code.xueersi.com/*"],
+      "js": ["js/vue.js","js/jquery-3.6.0/jquery-3.6.0.min.js","js/sweetalert2.all.js","js/functions.js","js/script/script.js"],
+      "css":["css/style.css","css/popup.css"]
+    }
+  ],
+  "icons": {
+    "48":"img/icon48.png",
+    "128":"img/icon128.png"
+  }
+}

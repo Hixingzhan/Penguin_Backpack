@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penguin Backpack</title>
+    <meta charset="utf-8">
+    <style>
+        html,body {
+            width:300px;
+            height:auto;
+        }
+        .level_1_menu > a {
+            cursor: pointer;
+        }
+        .level_1_menu > a::before {
+            content: '+ '
+        }
+        .level_2_menu > a {
+            padding-left:2rem !important;
+            cursor: pointer;
+        }
+        .button_circle {
+            background-color: white;
+            color: balck;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .button_circle::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            right:0;
+            bottom:0;
+            width: 5rem;
+            height: 5rem;
+            transform:translate3d(50%,50%,0) scale(0,0);
+            /* translate3d 3d偏移 */
+            /* scale 缩放 */
+            /* 百分比是相对于元素自身大小的 */
+            border-radius: 50%;
+            background-color: rgba(128,128,128,0.1);
+            transform-origin: center;
+            transition: ease-in-out .3s;
+            /* 从右下角气泡展开 */
+        }
+        .button_circle:hover::before {
+            transform: translate3d(50%,50%,0) scale(15,15);
+        }
+    </style>
+</head>
+<body>
+    <div class="media border p-3 button_circle" id="url">
+        <img class="mr-3 mt-3 rounded-circle" style="width:60px;" id="avatar">
+        <div class="media-body">
+          <h4 id="username">loading...</h4>
+          <p id="create_time">注册时间：loading...</p>
+        </div>
+    </div>
+    <div class="list-group level_1_menu">
+        <a href="#" class="list-group-item list-group-item-action" id="reload_userInfo">重新加载用户信息</a>
+        <a href="#" class="list-group-item list-group-item-action show_nav" for="#func">实用工具</a>
+        <div class="list-group level_2_menu" id="func">
+            <a href="#" class="list-group-item list-group-item-action" id="projects">批量管理作品</a>
+            <a href="#" class="list-group-item list-group-item-action" id="follow">批量关注工具</a>
+            <a href="#" class="list-group-item list-group-item-action" id="fans">自动回关工具</a>
+            <a href="#" class="list-group-item list-group-item-action" id="follows">批量管理关注列表</a>
+            <a href="#" class="list-group-item list-group-item-action" id="novel">对此页面应用小说阅读模式</a>
+        </div>
+        <a href="#" class="list-group-item list-group-item-action show_nav" for="#about_us">关于我们</a>
+        <div class="list-group level_2_menu" id="about_us">
+            <a href="#" class="list-group-item list-group-item-action" id="follow_developers">关注开发者</a>
+            <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=MYTvwYz6B8IGUW6ptOehK-ufXUZ8CizO&jump_from=webapi" class="list-group-item list-group-item-action">加入星斩QQ群</a>
+            <a href="mailto:hixingzhan@126.com?subject=Penguin%20Backpack意见反馈" class="list-group-item list-group-item-action">意见反馈</a>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="js/sweetalert2.all.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

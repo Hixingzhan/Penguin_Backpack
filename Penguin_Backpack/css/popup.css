@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 1px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: black;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #ededed;
+}
+.popup-modal {
+  display: flex;
+  /* 弹性盒子 */
+  position: fixed;
+  /* 固定定位（相对于浏览器窗口） */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* 居于第一层 */
+  background: rgba(0,0,0,0.2);
+  /* 透明度 */
+  align-items: center;
+  /* 垂直居中 */
+  justify-content: center;
+  /* 水平居中 */
+}
+.popup-main {
+  width: 600px;
+  height: 700px;
+  flex-shrink: 1;
+  /* 缩小 */
+  background: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.popup-header {
+  height: 60px;
+  padding: 0;
+}
+.popup-header > div {
+  text-align: center;
+}
+.popup-header:after { /*清除浮动*/
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.popup-title {
+  font-size: 25px;
+  height: 100%;
+  float: left;
+}
+.popup-close {
+  font-size: 25px;
+  cursor: pointer;
+  height: 100%;
+  width:50px;
+  float: right;
+}
+.popup-body {
+  position:relative;
+  height: 640px;
+  padding: 0;
+  overflow:auto;
+}
