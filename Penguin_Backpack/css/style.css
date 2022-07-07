@@ -232,7 +232,7 @@ input[type="checkbox"] {
 #info a:hover {
 	color: #e44c65 !important;
 }
-#text p {
+#text div {
 	font-size:18px;
 	text-indent: 2em;
     line-height: 1.8em;
